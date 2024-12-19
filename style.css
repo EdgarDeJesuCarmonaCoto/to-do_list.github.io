@@ -1,0 +1,179 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Área de entrada */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Tabla */
+.table {
+    margin-top: 20px;
+    max-height: 300px; /* Define una altura máxima */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    overflow-x: auto; /* Habilita desplazamiento horizontal para pantallas pequeñas */
+    border: 1px solid #ddd; /* Opcional: añade un borde para delimitar el área */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-break: break-word; /* Ajusta texto largo */
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Botón de borrar */
+td button {
+    padding: 5px 10px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+td button:hover {
+    background: #a71d2a;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    textarea {
+        height: 100px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    td button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    textarea {
+        height: 80px;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    td button {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
